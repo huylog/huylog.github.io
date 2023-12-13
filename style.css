@@ -4,6 +4,23 @@
     border-radius: 20px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.548) !important;
 }
+
 .bodybg {
     background-color: rgb(87, 87, 87);
 }
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+label {
+    color: white;
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    margin-bottom: 15px;
+}
+

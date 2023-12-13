@@ -1,0 +1,243 @@
+* {
+    /*all; reseting formats*/
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*declairing color/font variables*/
+    --main-bg-color: #cccc99;
+    --secondary-bg-color: #a3a352;
+    --norm-text-color: #2B303A;
+    --contrast-color: #1B1B0E;
+    --link-color: #414105;
+    --title-font: 'Black Ops One', sans-serif;
+    --body-font: 'Changa', sans-serif;
+    
+}
+
+.headerfbicon {
+    z-index: 999999999;
+    position: fixed;
+    font-size: 16px;
+    transition: font-size 0.5s ease-in;
+    right: 40px;
+    top: 10px;
+}
+
+.headerfbicon:hover {
+    font-size: 30px;
+}
+
+.headerfbicon.no-line-animation::before {
+    display: none;
+}
+
+/*  <--nav. menu + linkz-->  */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--link-color);
+    padding-block:4px;
+    border: 1rem solid var(--contrast-color);
+}
+
+a {
+    color: var(--secondary-bg-color);
+    position: relative;
+    text-decoration: none;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4cm;
+    background-color: var(--main-bg-color);
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+    transform-origin: bottom;
+    transform: scaleX(1);
+}
+
+.bgtitle {
+    /* cover photo and title for index */
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background-image: repeating-linear-gradient(45deg, #1B1B0E 25%, transparent 25%, transparent 75%, var(--secondary-bg-color) 75%, var(--secondary-bg-color)), repeating-linear-gradient(45deg, var(--secondary-bg-color) 25%, var(--secondary-bg-color) 25%, var(--contrast-color) 75%, var(--secondary-bg-color) 75%, var(--secondary-bg-color));
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    border-bottom: 15px solid var(--contrast-color);
+}
+.bgtitle-sm {
+    /* smaller cover photo and title for all other pages */
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background-image: repeating-linear-gradient(45deg, #1B1B0E 25%, transparent 25%, transparent 75%, var(--secondary-bg-color) 75%, var(--secondary-bg-color)), repeating-linear-gradient(45deg, var(--secondary-bg-color) 25%, var(--secondary-bg-color) 25%, var(--contrast-color) 75%, var(--secondary-bg-color) 75%, var(--secondary-bg-color));
+    background-position: 0 0, 10px 10px;
+    background-size: 5px 5px;
+    border-bottom: 15px solid var(--contrast-color);
+}
+.bgtitle .title { /*title for index "Welcome to Springfield's Railroad Historical Museum!"*/
+    position: absolute;
+    top: 0;
+    background: #a3a35283;
+    color: var(--contrast-color);
+    width: 100%;
+    padding: 20px;
+}
+.bgtitle-sm .title { /*title for all other pages*/
+    position: absolute;
+    top: 0;
+    background: #a3a35283;
+    color: var(--contrast-color);
+    width: 100%;
+    padding: 20px;
+}
+/*  <--header-->  */
+header {
+    background-color: var(--contrast-color);
+    color: #A3A352;
+    font-family: var(--title-font);
+}
+header>h1 {
+    font-size: 45px;
+}
+
+/*  <--body-->  */
+body {
+    background-image: url("imgs/0railroadbg.jpg");
+    background-repeat: repeat;
+    text-align: center;
+    color: var(--norm-text-color);
+    font-family: var(--body-font)
+}
+
+
+
+/*  <--cards-->  */
+.lrgcards {
+    /*parent class for all cards that take up the whole screen [repeat(1fr)->(e.g. "about us")]*/
+    display: grid;
+    margin-top: -10px;
+    margin-inline: 20%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    align-items: flex-start;
+}
+
+.lrgcard {
+    /*lrgcard('s) child*/
+    border: 7px solid var(--contrast-color);
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+    padding: .5rem;
+    margin-bottom: 20px;
+}
+
+.underlinenspacing {
+    /*"about us" styles*/
+    text-decoration-line: underline;
+    padding-bottom: 6px;
+}
+
+.cards {
+    /*parent class for all cards, two columns taking up the full view port [repeat(2, 2fr)]*/
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-auto-rows: auto;
+    align-items: stretch;
+    border-collapse: collapse;
+    margin-inline: 16.75%;
+    
+}
+
+.card {
+    /*cards('s) child*/
+    border: 7px solid var(--contrast-color);
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+    padding: .5rem;
+    margin-inline: 10%;
+}
+
+/*  <--imgs-->  */
+.imgstylecards {
+    /*a class to style all imgs on cards*/
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: var(--norm-text-color) solid 1px;
+}
+
+.scroll-container {
+    /*fancy smancy scolling images <3*/
+    background-color: var(--contrast-color);
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.fittingimg {  /*a class to fit imgs specfically for the scroll container*/
+    height: 500px;
+    width: inherit;
+    padding: 15px;
+}
+
+.button-container {  /*button cage*/
+    text-align: center;
+    margin: 20px;
+}
+
+.registration-button {  /*button for button things*/
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--link-color);
+    color: var(--contrast-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.registration-button:hover {
+    background-color: #CCCC99;
+}
+
+/*  <--footer-->  */
+footer {
+    border-top: var(--main-bg-color) dashed 5px;
+    background-color: var(--contrast-color);
+    color: var(--secondary-bg-color);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+/*  <--media query stuffs (grossly easy this time?)-->  */
+@media (max-width: 1024px) {
+    .cards {
+        display: inline-block;
+    }
+
+    .lrgcards {
+        display: inline-block;
+    }
+}

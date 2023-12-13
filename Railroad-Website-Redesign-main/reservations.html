@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b624da636f.js" crossorigin="anonymous"></script> <!--facebook buttonz-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Changa&display=swap" rel="stylesheet">
+    <!--google fonts-->
+
+    <title>Document</title>
+</head>
+
+<header> <!--header-->
+    <h1>Railroad Historical Museum INC of Springfield Missouri</h1>
+    <nav> <!--navbar-->
+        <div><a href="index.html">Home</a></div><b>&#9747;</b>
+        <div><a href="tours.html">Tours</a></div><b>&#9747;</b>
+        <div><a href="reservations.html">Reservation Form</a></div><b>&#9747;</b>
+        <div><a href="links.html">Links</a></div>
+    </nav>
+</header>
+
+<a class="headerfbicon no-line-animation" title="Railroad Historical Museum INC Facebook!"
+    href="https://www.facebook.com/rrhistoricalmuseum/?frefts" target="_blank"><i
+        class="fa-brands fa-square-facebook fa-2xl" style="color: #a3a352;"></i></a> <!--fbicon-->
+
+<div class="bgtitle-sm"> <!--cover photo and header-->
+    <img src="imgs/traincleaning.jpg" alt="train1">
+    <div class="title">
+        <h1>Welcome to Springfield's Railroad Historical Museum!</h1>
+        <p>Volunteers Needed: Inquire By Email or Stop By</p>
+    </div>
+</div>
+
+<body>
+    <div class="lrgcards">
+        <div class="lrgcard">
+            <h1><strong>Reservation Form:</strong></h1>
+
+            <form action="thankyou.html" method="post" class="reservation-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+
+                <label for="tour">Select Tour:</label>
+                <select id="tour" name="tour" required>
+                    <option value="classic">THE Pump Car Tour!</option>
+                    <option value="adventure">The Max Jahn Building Tour</option>
+                </select>
+                <br>
+
+                <label>Preferred Time:</label>
+                <input type="radio" id="morning" name="time" value="morning" required>
+                <label for="morning">Morning</label>
+                <input type="radio" id="afternoon" name="time" value="afternoon" required>
+                <label for="afternoon">Afternoon</label>
+                <br>
+
+                <label for="comments">Additional Needs:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+                <br>
+
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+    </div>
+
+    <footer> <!--footer-->
+        <p><b>NO CHARGE FOR ADMISSION</b></p>
+        <p>Email: railroadhistoricalmuseum@yahoo.com</p>
+        <p>Phone: 417-343-6838</p>
+        <p><a class="linkcolor"
+                href="https://www.google.com/maps/place/Grant+Beach+Park/@37.2236619,-93.3006909,18z/data=!3m1!4b1!4m2!3m1!1s0x87cf6258db9a9c29:0xc2a08b750f2e4fca">
+                1401 N Grant Street - Springfield, MO 65802</a></p>
+        <p>Located in Grant Beach Park</p>
+        <p>May through October - 2 to 4 pm - Saturday Only</p>
+        <p><i>In due regards to the repectable President Johnnie Wollard (Nov 7, 1944 - Dec 7, 2022)</i></p>
+    </footer>
+</body>
+
+</html>
